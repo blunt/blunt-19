@@ -1,0 +1,24 @@
+{
+  "name": "blunt-2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind:css": "tailwind build css/main.src.css -o css/main.css",
+    "build": "npm run tailwind:css && npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blunt/blunt-19.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blunt/blunt-19/issues"
+  },
+  "homepage": "https://github.com/blunt/blunt-19#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "tailwindcss": "^1.0.4"
+  }
+}
