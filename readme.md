@@ -1,6 +1,6 @@
 # Blunt
 
-### Config
+### Install
 Run `npm install`
 
 ### Build
