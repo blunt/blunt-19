@@ -2,7 +2,7 @@
 tags: project
 title: Bac Ky
 client: Bac Ky
-services: Web Design & Development
+services: Design & Development
 cta: Visit Website
 project_url: https://backy.netlify.com/
 background_color: '#121070'
