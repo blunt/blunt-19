@@ -8,24 +8,18 @@
 </head>
 <body>
   <section class="flex flex-wrap">
-    <section class="md:w-1/2 w-full md:fixed inset-y-0 left-0 bg-white md:p-12 p-6 flex flex-col border-black">
-      <div class="mb-32 flex-grow">
-        <h1 class="f2 border-t-4 border-b border-transparent text-3xl font-black pb-1">{{ global.title }}</h1>
-        <p class="lg:text-6xl text-5xl font-black md:mt-16 mt-0">{{ global.subtitle }}</p>
+    <section class="md:w-1/2 w-full md:fixed inset-y-0 left-0 md:bg-white bg-black md:text-black text-white md:p-12 px-6 pt-6 flex flex-col border-black">
+      <div class="md:mb-32 flex-grow md:block flex border-t-4 border-b border-transparent items-center">
+        <h1 class="md:text-3xl text-xl md:font-black font-bold">{{ global.title }}.</h1>
+        <p class="lg:text-6xl md:text-5xl text-xl md:font-black font-bold md:mt-16 mt-0 md:ml-0 ml-2">{{ global.subtitle }}</p>
+        <a class="md:hidden block ml-auto font-mono text-xs hover:bg-white hover:text-black" href="mailto:{{ global.email}}">{{ global.email }}</a>
       </div>
-      <div class="flex flex-wrap">
-        {%- for member in global.members -%}
-            <div class="md:w-1/2 w-full person flex items-center md:mb-0 {% if forloop.index != forloop.length %}mb-6{% endif %}">
-              <div class="mr-6 border border-black">
-                  <img class="w-16 h-16 object-cover" src="images/{{ member.avatar }}" alt="">
-              </div>
-              <div>
-                <p class="opacity-75 font-mono text-xs">/{{ member.title }}</p>
-                <p>{{ member.name }}</p>
-                <a class="border-b border-black inline-block hover:border-transparent" href="mailto:{{ member.email }}">{{ member.email }}</a>
-              </div>
-            </div>
-        {%- endfor -%}
+      <div class="w-full mt-auto md:flex hidden items-end">
+        <div class="w-1/2">
+          <p class="mb-2"><a class="border-b inline-block hover:border-transparent border-black" href="mailto:{{ global.email }}">{{ labels.email }}</a></p>
+          <p><a class="border-b inline-block hover:border-transparent border-black" href="{{ global.instagram }}" target="_blank" rel="noopener noreferrer">{{ labels.instagram }}</a></p>
+        </div>
+        <p class="opacity-50">© Blunt</p>
       </div>
     </section>
     <div class="md:w-1/2 w-full ml-auto relative">
@@ -39,8 +33,8 @@
       <article class="min-h-screen bg-black ml-auto md:px-12 px-6 md:pb-12 pb-6 text-white flex flex-col">
         <div class="border-b pb-4 border-transparent bg-black sticky z-20 top-0 flex font-mono text-xs">
           <div class="border-t-4 border-transparent md:mt-12 mt-6 pt-4 w-full flex">
-            <div class="ml-auto">
-              <a class="hover:bg-white hover:text-black" href="{{ global.instagram }}" target="_blank" rel="noopener noreferrer">{{ labels.instagram }}</a>
+            <div class="">
+                <p><span class="text-transparent">/</span>{{ pageTitles.about }}</p>
             </div>
           </div>
         </div>
@@ -49,16 +43,6 @@
           {%- for description in intro.descriptions -%}
             <p class="text-indent opacity-75 font-mono text-sm mb-1">{{ description }}</p>
           {%- endfor -%}
-        </div>
-        <div class="flex w-full mt-auto">
-          <div class="w-1/2">
-            <p class="opacity-75 font-mono text-xs">/{{ labels.email }}</p>
-            <a href="mailto:{{ global.email }}" class="border-b border-white inline-block hover:border-transparent">{{ global.email }}</a>
-          </div>
-          <div class="w-1/2">
-            <p class="opacity-75 font-mono text-xs">/{{ labels.services }}</p>
-            <p>{{ global.services }}</p>
-          </div>
         </div>
       </article>
       <div class="relative">
@@ -98,23 +82,26 @@
         <div class="border-b bg-black pb-4 border-transparent sticky top-0 flex font-mono text-xs">
           <div class="border-t-4 border-transparent md:mt-12 mt-6 pt-4 w-full flex">
             <p class="block"><span class="text-transparent">/</span>{{ pageTitles.contact }}</p>
-            <a class="block ml-auto hover:bg-white hover:text-black" href="{{ global.instagram }}"  target="_blank" rel="noopener noreferrer">{{ labels.instagram }}</a>
           </div>
         </div>
-        <div class="flex-1 md:mt-16 mt-16 mb-20">
+        <div class="flex-grow md:mt-16 mt-16 mb-20">
           <h2 class="lg:text-6xl text-5xl md:mb-12 mb-6 font-semibold leading-tight">{{ contact.heading }}</h2>
           <p class="text-indent text-sm font-mono opacity-75">{{ contact.description }}</p>
           <a href="{{ global.email }}" class="mt-6 border-b border-white inline-block hover:border-transparent">{{ contact.cta }}</a>
         </div>
-        <div class="flex w-full mt-auto">
-          <div class="w-1/2">
-            <p class="opacity-75 font-mono text-xs">/{{ labels.email }}</p>
-            <a href="mailto:{{ global.email }}" class="border-b border-white inline-block hover:border-transparent">{{ global.email }}</a>
-          </div>
-          <div class="w-1/2">
-            <p class="opacity-75 font-mono text-xs">/{{ labels.services }}</p>
-            <p>{{ global.services }}</p>
-          </div>
+        <div class="flex flex-wrap">
+          {%- for member in global.members -%}
+            <div class="md:w-1/2 w-full person flex items-center md:mb-0 {% if forloop.index != forloop.length %}mb-6{% endif %}">
+              <div class="mr-6">
+                  <img class="w-16 h-16 object-cover" src="images/{{ member.avatar }}" alt="">
+              </div>
+              <div class="text-sm">
+                <p class="opacity-75 font-mono text-xs">/{{ member.title }}</p>
+                <p>{{ member.name }}</p>
+                <a class="border-b border-white inline-block hover:border-transparent" href="mailto:{{ member.email }}">{{ member.email }}</a>
+              </div>
+            </div>
+          {%- endfor -%}
         </div>
       </article>
     </div>
