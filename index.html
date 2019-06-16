@@ -42,7 +42,7 @@
         <div class="flex-grow md:mt-16 mt-16 pb-16">
           <h2 class="md:mb-12 mb-6 lg:text-5xl text-3xl font-semibold leading-tight">{{ intro.heading }}</h2>
           {%- for description in intro.descriptions -%}
-            <p class="text-indent opacity-75 font-mono text-sm mb-1">{{ description }}</p>
+            <p class="text-indent opacity-75 font-mono md:text-sm text-xs mb-1">{{ description }}</p>
           {%- endfor -%}
         </div>
       </article>
@@ -63,7 +63,7 @@
             </div>
             <div class="flex-grow md:mt-16 mt-16 mb-20">
               <h3 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-semibold leading-tight"><a href="{{ project.data.project_url }}" target="_blank" rel="noopener noreferrer">{{ project.data.title }}</a></h3>
-              <p class="text-indent text-sm font-mono opacity-75">{{ project.data.description }}</p>
+              <p class="text-indent md:text-sm text-xs font-mono opacity-75">{{ project.data.description }}</p>
               <a href="{{ project.data.project_url }}" class="mt-6 border-b inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.cta }}</a>
             </div>
             <div class="flex w-full">
@@ -87,7 +87,7 @@
         </div>
         <div class="flex-grow md:mt-16 mt-16 mb-20">
           <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-semibold leading-tight">{{ contact.heading }}</h2>
-          <p class="text-indent text-sm font-mono opacity-75">{{ contact.description }}</p>
+          <p class="text-indent md:text-sm text-xs font-mono opacity-75">{{ contact.description }}</p>
           <a href="{{ global.email }}" class="mt-6 border-b border-white inline-block hover:border-transparent">{{ contact.cta }}</a>
         </div>
         <div class="flex flex-wrap">
@@ -96,7 +96,7 @@
               <div class="mr-6">
                   <img class="w-16 h-16 object-cover" src="images/{{ member.avatar }}" alt="">
               </div>
-              <div class="text-sm">
+              <div class="md:text-sm text-xs">
                 <p class="opacity-75 font-mono text-xs">/{{ member.title }}</p>
                 <p>{{ member.name }}</p>
                 <a class="border-b border-white inline-block hover:border-transparent" href="mailto:{{ member.email }}">{{ member.email }}</a>
