@@ -7459,6 +7459,11 @@ video {
   text-indent: 2rem;
 }
 
+.min-h-screen {
+  min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;
