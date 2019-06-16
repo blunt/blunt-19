@@ -5,5 +5,5 @@ module.exports = {
     "jpg",
     "css",
   ],
-  passthroughFileCopy: true
+  passthroughFileCopy: true,
 };
