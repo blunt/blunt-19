@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tailwind:css": "tailwind build css/main.src.css -o css/main.css",
+    "watch": "eleventy --serve",
     "build": "npm run tailwind:css && npx eleventy"
   },
   "repository": {
