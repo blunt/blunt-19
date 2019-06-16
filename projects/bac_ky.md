@@ -1,6 +1,6 @@
 ---
 tags: project
-title: Bac Ky
+title: Baaac Ky
 client: Bac Ky
 services: Web Design & Development
 project_url: https://backy.netlify.com/
