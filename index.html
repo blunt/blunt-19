@@ -8,9 +8,11 @@
 </head>
 <body>
   <section class="flex flex-wrap">
-    <section class="md:w-1/2 w-full min-h-screen md:fixed inset-y-0 left-0 bg-white md:p-12 p-6 flex flex-col border-black">
-      <h1 class="f2 border-t-4 border-b border-transparent text-3xl font-black pb-1">Blunt</h1>
-      <p class="lg:text-6xl text-5xl font-black md:mt-16 mt-16 mb-20 flex-grow">As fuck.</p>
+    <section class="md:w-1/2 w-full md:fixed inset-y-0 left-0 bg-white md:p-12 p-6 flex flex-col border-black">
+      <div class="mb-32 flex-grow">
+        <h1 class="f2 border-t-4 border-b border-transparent text-3xl font-black pb-1">Blunt</h1>
+        <p class="lg:text-6xl text-5xl font-black md:mt-16 mt-0">As fuck.</p>
+      </div>
       <div class="flex flex-wrap"><div class="md:w-1/2 w-full person flex items-center md:mb-0 mb-6">
               <div class="mr-6 border border-black">
                   <img class="w-16 h-16 object-cover" src="images/maxim.jpg" alt="">
@@ -157,17 +159,4 @@
     </div>
   </section>
 </body>
-<script>
-  // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-  let vh = window.innerHeight * 0.01;
-  // Then we set the value in the --vh custom property to the root of the document
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-  
-  // // We listen to the resize event
-  // window.addEventListener('resize', () => {
-  //   // We execute the same script as before
-  //   let vh = window.innerHeight * 0.01;
-  //   document.documentElement.style.setProperty('--vh', `${vh}px`);
-  // });
-</script>
 </html>
