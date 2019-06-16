@@ -1,5 +1,6 @@
 ---
 tags: project
+index: 1
 title: Baaac Ky
 client: Bac Ky
 services: Web Design & Development

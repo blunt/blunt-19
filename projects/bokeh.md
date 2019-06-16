@@ -1,5 +1,6 @@
 ---
 tags: project
+index: 2
 title: Bokeh
 client: Bokeh
 services: Development
