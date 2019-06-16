@@ -66,7 +66,7 @@
               <p class="text-indent md:text-sm text-xs font-mono opacity-75">{{ project.data.description }}</p>
               <a href="{{ project.data.project_url }}" class="mt-6 border-b inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.cta }}</a>
             </div>
-            <div class="flex w-full">
+            <div class="flex w-full text-sm">
               <div class="w-1/2">
                 <p class="opacity-75 font-mono text-xs">/{{ labels.client }}</p>
                 <a href="{{ project.data.project_url }}" class="border-b inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.client }}</a>
@@ -96,7 +96,7 @@
               <div class="mr-6">
                   <img class="w-16 h-16 object-cover" src="images/{{ member.avatar }}" alt="">
               </div>
-              <div class="md:text-sm text-xs">
+              <div class="text-sm">
                 <p class="opacity-75 font-mono text-xs">/{{ member.title }}</p>
                 <p>{{ member.name }}</p>
                 <a class="border-b border-white inline-block hover:border-transparent" href="mailto:{{ member.email }}">{{ member.email }}</a>
