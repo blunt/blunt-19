@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="flex-grow mt-16 pb-16">
-            <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-semibold leading-none">{{ intro.heading }}</h2>
+            <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-bold leading-none">{{ intro.heading }}</h2>
             {%- for description in intro.descriptions -%}
               <p class="text-indent md:text-xl">{{ description }}</p>
             {%- endfor -%}
@@ -65,7 +65,7 @@
                 </div>
               </div>
               <div class="flex-grow mt-16 mb-20 md:text-xl">
-                <h3 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-semibold leading-none"><a href="{{ project.data.project_url }}" target="_blank" rel="noopener noreferrer">{{ project.data.title }}</a></h3>
+                <h3 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-bold leading-none"><a href="{{ project.data.project_url }}" target="_blank" rel="noopener noreferrer">{{ project.data.title }}</a></h3>
                 <p class="text-indent">{{ project.data.description }}</p>
                 <a href="{{ project.data.project_url }}" class="mt-6 border-b border-black inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.cta }}</a>
               </div>
@@ -89,7 +89,7 @@
             </div>
           </div>
           <div class="flex-grow md:mt-16 mt-16 mb-20">
-            <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-semibold leading-none">{{ contact.heading }} <a href="{{ global.email }}" class="border-b-4 border-black inline-block hover:border-transparent">{{ contact.cta | downcase }}</a>.</h2>
+            <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-bold leading-none">{{ contact.heading }} <a href="{{ global.email }}" class="border-b-4 border-black inline-block hover:border-transparent">{{ contact.cta | downcase }}</a>.</h2>
           </div>
           <div class="flex flex-wrap">
             {%- for member in global.members -%}
