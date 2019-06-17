@@ -28,87 +28,89 @@
       </div>
     </section>
     <div class="md:w-1/2 w-full ml-auto relative bg-white">
-      <div class="absolute z-30 w-full top-0 bottom-0 md:px-12 px-6 pointer-events-none">
-        <div class="border-b pb-4 border-black text-black sticky z-10 top-0 flex font-mono text-xs">
-          <div class="border-t border-transparent md:mt-12 pt-4 w-full flex">
-            <p class="block ">/</p>
-          </div>
-        </div>
-      </div>
-      <article class="min-h-screen bg-white ml-auto md:px-12 px-6 md:pb-12 pb-6 text-black flex flex-col">
-        <div class="pb-4 bg-white sticky z-20 top-0 flex font-mono text-xs">
-          <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full flex">
-            <div class="">
-                <p><span class="text-transparent">/</span></p>
+      <div class="relative lg:mr-6">
+        <div class="absolute z-30 w-full top-0 bottom-0 md:px-12 px-6 pointer-events-none">
+          <div class="border-b pb-4 border-black text-black sticky z-10 top-0 flex font-mono text-xs">
+            <div class="border-t border-transparent md:mt-12 pt-4 w-full flex">
+              <p class="block ">/</p>
             </div>
           </div>
         </div>
-        <div class="flex-grow md:mt-16 mt-8 pb-16">
-          <h2 class="md:mb-12 mb-6 lg:text-5xl text-3xl font-semibold leading-tight">{{ intro.heading }}</h2>
-          {%- for description in intro.descriptions -%}
-            <p class="text-indent font-mono md:text-sm text-xs mb-1">{{ description }}</p>
+        <article class="min-h-screen bg-white ml-auto md:px-12 px-6 md:pb-12 pb-6 text-black flex flex-col">
+          <div class="pb-4 bg-white sticky z-20 top-0 flex font-mono text-xs">
+            <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full flex">
+              <div class="">
+                  <p><span class="text-transparent">/</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-grow md:mt-16 mt-8 pb-16">
+            <h2 class="md:mb-12 mb-6 lg:text-5xl text-3xl font-semibold leading-tight">{{ intro.heading }}</h2>
+            {%- for description in intro.descriptions -%}
+              <p class="text-indent font-mono md:text-sm text-xs mb-1">{{ description }}</p>
+            {%- endfor -%}
+          </div>
+        </article>
+        <div class="relative">
+          <div class="absolute z-20 w-full top-0 bottom-0 md:px-12 px-6 md:pb-12 pb-6 pointer-events-none">
+            <div class="pb-4 sticky top-0 flex font-mono text-xs">
+              <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full">
+                <p><span class="text-transparent">/</span>{{ pageTitles.projects }}</p>
+              </div>
+            </div>
+          </div>
+          {%- for project in collections.project -%}
+            <article class="lg:rounded-lg md:rounded-l-lg {% if forloop.index != forloop.length %}md:mb-6{% endif %} min-h-screen ml-auto md:px-12 px-6 md:pb-12 pb-6 relative text-black flex flex-col" style="background-color:{{ project.data.background_color }};">
+              <div class="pb-4 z-10 sticky top-0" style="background-color:{{ project.data.background_color }};">
+                <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full flex">
+                  <p class="ml-auto text-xs font-mono">{{ forloop.index }}/{{ forloop.length }}</p>
+                </div>
+              </div>
+              <div class="flex-grow md:mt-16 mt-16 mb-20">
+                <h3 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-semibold leading-tight"><a href="{{ project.data.project_url }}" target="_blank" rel="noopener noreferrer">{{ project.data.title }}</a></h3>
+                <p class="text-indent md:text-sm text-xs font-mono">{{ project.data.description }}</p>
+                <a href="{{ project.data.project_url }}" class="mt-6 border-b border-black inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.cta }}</a>
+              </div>
+              <div class="flex w-full text-sm">
+                <div class="w-1/2">
+                  <p class="opacity-50 font-mono text-xs">/{{ labels.client }}</p>
+                  <a href="{{ project.data.project_url }}" class="border-b border-black inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.client }}</a>
+                </div>
+                <div class="w-1/2">
+                  <p class="opacity-50 font-mono text-xs">/{{ labels.services }}</p>
+                  <p>{{ project.data.services }}</p>
+                </div>
+              </div>
+            </article>
           {%- endfor -%}
         </div>
-      </article>
-      <div class="relative">
-        <div class="absolute z-20 w-full top-0 bottom-0 md:px-12 px-6 md:pb-12 pb-6 pointer-events-none">
-          <div class="pb-4 sticky top-0 flex font-mono text-xs">
-            <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full">
-              <p><span class="text-transparent">/</span>{{ pageTitles.projects }}</p>
+        <article class="min-h-screen bg-white ml-auto md:px-12 px-6 md:pb-12 pb-6 relative flex flex-col">
+          <div class="border-b bg-white pb-4 border-transparent sticky top-0 flex font-mono text-xs">
+            <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full flex">
+              <p class="block"><span class="text-transparent">/</span>{{ pageTitles.contact }}</p>
             </div>
           </div>
-        </div>
-        {%- for project in collections.project -%}
-          <article class="md:rounded-l-lg md:mb-12 min-h-screen ml-auto md:px-12 px-6 md:pb-12 pb-6 relative text-black flex flex-col" style="background-color:{{ project.data.background_color }};">
-            <div class="pb-4 z-10 sticky top-0" style="background-color:{{ project.data.background_color }};">
-              <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full flex">
-                <p class="ml-auto text-xs font-mono">{{ forloop.index }}/{{ forloop.length }}</p>
+          <div class="flex-grow md:mt-16 mt-16 mb-20">
+            <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-semibold leading-tight">{{ contact.heading }}</h2>
+            <p class="text-indent md:text-sm text-xs font-mono">{{ contact.description }}</p>
+            <a href="{{ global.email }}" class="mt-6 border-b border-black inline-block hover:border-transparent">{{ contact.cta }}</a>
+          </div>
+          <div class="flex flex-wrap">
+            {%- for member in global.members -%}
+              <div class="lg:w-1/2 w-full person flex items-start lg:mb-0 {% if forloop.index != forloop.length %}mb-6{% endif %}">
+                <div class="mr-4">
+                  <img class="w-16 h-16 object-fill rounded" src="images/{{ member.avatar }}" alt="">
+                </div>
+                <div class="text-sm">
+                  <p class="opacity-50 font-mono text-xs">/{{ member.title }}</p>
+                  <p>{{ member.name }}</p>
+                  <a class="border-b border-black inline-block hover:border-transparent" href="mailto:{{ member.email }}">{{ member.email }}</a>
+                </div>
               </div>
-            </div>
-            <div class="flex-grow md:mt-16 mt-16 mb-20">
-              <h3 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-semibold leading-tight"><a href="{{ project.data.project_url }}" target="_blank" rel="noopener noreferrer">{{ project.data.title }}</a></h3>
-              <p class="text-indent md:text-sm text-xs font-mono">{{ project.data.description }}</p>
-              <a href="{{ project.data.project_url }}" class="mt-6 border-b border-black inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.cta }}</a>
-            </div>
-            <div class="flex w-full text-sm">
-              <div class="w-1/2">
-                <p class="opacity-50 font-mono text-xs">/{{ labels.client }}</p>
-                <a href="{{ project.data.project_url }}" class="border-b border-black inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.client }}</a>
-              </div>
-              <div class="w-1/2">
-                <p class="opacity-50 font-mono text-xs">/{{ labels.services }}</p>
-                <p>{{ project.data.services }}</p>
-              </div>
-            </div>
-          </article>
-        {%- endfor -%}
+            {%- endfor -%}
+          </div>
+        </article>
       </div>
-      <article class="min-h-screen bg-white ml-auto md:px-12 px-6 md:pb-12 pb-6 relative flex flex-col">
-        <div class="border-b bg-white pb-4 border-transparent sticky top-0 flex font-mono text-xs">
-          <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full flex">
-            <p class="block"><span class="text-transparent">/</span>{{ pageTitles.contact }}</p>
-          </div>
-        </div>
-        <div class="flex-grow md:mt-16 mt-16 mb-20">
-          <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-semibold leading-tight">{{ contact.heading }}</h2>
-          <p class="text-indent md:text-sm text-xs font-mono">{{ contact.description }}</p>
-          <a href="{{ global.email }}" class="mt-6 border-b border-black inline-block hover:border-transparent">{{ contact.cta }}</a>
-        </div>
-        <div class="flex flex-wrap">
-          {%- for member in global.members -%}
-            <div class="lg:w-1/2 w-full person flex items-start lg:mb-0 {% if forloop.index != forloop.length %}mb-6{% endif %}">
-              <div class="mr-4">
-                <img class="w-16 h-16 object-fill rounded" src="images/{{ member.avatar }}" alt="">
-              </div>
-              <div class="text-sm">
-                <p class="opacity-50 font-mono text-xs">/{{ member.title }}</p>
-                <p>{{ member.name }}</p>
-                <a class="border-b border-black inline-block hover:border-transparent" href="mailto:{{ member.email }}">{{ member.email }}</a>
-              </div>
-            </div>
-          {%- endfor -%}
-        </div>
-      </article>
     </div>
   </section>
 </body>
