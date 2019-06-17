@@ -41,10 +41,10 @@
               </div>
             </div>
           </div>
-          <div class="flex-grow md:mt-16 mt-8 pb-16">
+          <div class="flex-grow mt-16 pb-16">
             <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-semibold leading-none">{{ intro.heading }}</h2>
             {%- for description in intro.descriptions -%}
-              <p class="text-indent md:text-xl text-xs">{{ description }}</p>
+              <p class="text-indent md:text-xl">{{ description }}</p>
             {%- endfor -%}
           </div>
         </article>
@@ -64,7 +64,7 @@
                   <p class="ml-auto text-xs font-mono">{{ forloop.index }}<span class="text-transparent">/{{ forloop.length }}</span></p>
                 </div>
               </div>
-              <div class="flex-grow md:mt-16 mt-16 mb-20 md:text-xl">
+              <div class="flex-grow mt-16 mb-20 md:text-xl">
                 <h3 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-semibold leading-none"><a href="{{ project.data.project_url }}" target="_blank" rel="noopener noreferrer">{{ project.data.title }}</a></h3>
                 <p class="text-indent">{{ project.data.description }}</p>
                 <a href="{{ project.data.project_url }}" class="mt-6 border-b border-black inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.cta }}</a>
