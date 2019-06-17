@@ -7,3 +7,8 @@
 .text-indent {
   text-indent: 2rem;
 }
+
+::selection {
+  color: white; 
+  background-color: rgba(0,0,0,0.99);
+}
