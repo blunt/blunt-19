@@ -10,14 +10,10 @@
 <body>
   <section class="flex flex-wrap">
     <div class="fixed border-t-4 border-black w-full z-40"></div>
-    <section class="md:w-1/2 w-full md:fixed inset-y-0 left-0 bg-white md:text-black md:p-12 px-6 pt-6 flex flex-col">
-      <div class="md:mb-32 flex-grow md:block flex border-t-2 border-b border-transparent items-start">
+    <section class="md:flex hidden md:w-1/2 w-full md:fixed inset-y-0 left-0 bg-white md:text-black md:p-12 px-6 pt-6 flex-col">
+      <div class="md:mb-32 flex-grow">
         <h1 class="md:text-3xl md:font-black font-bold">{{ global.title }}</h1>
         <p class="lg:text-6xl md:text-5xl md:font-black font-bold md:mt-16 mt-0 md:ml-0 ml-1">{{ global.subtitle }}</p>
-        <div class="ml-auto md:hidden block">
-          <a class="block ml-auto font-mono text-xs hover:bg-black hover:text-white" href="mailto:{{ global.email}}">{{ labels.email }}</a>
-          <a class="block ml-auto font-mono text-xs hover:bg-black hover:text-white" href="mailto:{{ global.instagram}}">{{ labels.instagram }}</a>
-        </div>
       </div>
       <div class="w-full mt-auto md:block hidden items-end">
         <div class="mb-16">
@@ -31,16 +27,17 @@
       <div class="relative lg:mr-12">
         <div class="absolute z-30 w-full top-0 bottom-0 md:px-12 px-6 pointer-events-none">
           <div class="border-b pb-4 border-black text-black sticky z-10 top-0 flex font-mono text-xs">
-            <div class="border-t border-transparent md:mt-12 pt-4 w-full flex">
+            <div class="md:mt-12 pt-5 w-full flex">
               <p class="block ">/</p>
             </div>
           </div>
         </div>
         <article class="min-h-screen bg-white ml-auto md:px-12 px-6 md:pb-12 pb-6 text-black flex flex-col">
           <div class="pb-4 bg-white sticky z-20 top-0 flex font-mono text-xs">
-            <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full flex">
-              <div class="">
-                  <p><span class="text-transparent">/</span></p>
+            <div class="md:mt-12 pt-5 w-full flex">
+              <div class="flex w-full">
+                  <p><span class="text-transparent">/</span><span class="md:hidden inline font-sans font-bold">{{ global.title }}</span></p>
+                  <a class="ml-auto hover:bg-black hover:text-white md:hidden block" href="mailto:{{ global.email }}">{{ labels.email }}</a>
               </div>
             </div>
           </div>
@@ -54,7 +51,7 @@
         <div class="relative">
           <div class="absolute z-20 w-full top-0 bottom-0 md:px-12 px-6 md:pb-12 pb-6 pointer-events-none">
             <div class="pb-4 sticky top-0 flex font-mono text-xs">
-              <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full">
+              <div class="md:mt-12 pt-5 w-full">
                 <p><span class="text-transparent">/</span>{{ pageTitles.projects }}</p>
               </div>
             </div>
@@ -62,7 +59,7 @@
           {%- for project in collections.project -%}
             <article class="lg:rounded-lg md:rounded-l-lg {% if forloop.index != forloop.length %}md:mb-6{% endif %} min-h-screen ml-auto md:px-12 px-6 md:pb-12 pb-6 relative text-black flex flex-col" style="background-color:{{ project.data.background_color }};">
               <div class="pb-4 z-10 sticky top-0" style="background-color:{{ project.data.background_color }};">
-                <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full flex">
+                <div class="md:mt-12 pt-5 w-full flex">
                   <p class="ml-auto text-xs font-mono">{{ forloop.index }}/{{ forloop.length }}</p>
                 </div>
               </div>
@@ -86,7 +83,7 @@
         </div>
         <article class="min-h-screen bg-white ml-auto md:px-12 px-6 md:pb-12 pb-6 relative flex flex-col">
           <div class="border-b bg-white pb-4 border-transparent sticky top-0 flex font-mono text-xs">
-            <div class="border-t-2 border-transparent md:mt-12 pt-4 w-full flex">
+            <div class="md:mt-12 pt-5 w-full flex">
               <p class="block"><span class="text-transparent">/</span>{{ pageTitles.contact }}</p>
             </div>
           </div>
