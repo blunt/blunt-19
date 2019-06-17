@@ -7499,6 +7499,16 @@ video {
   text-indent: 2rem;
 }
 
+::-moz-selection {
+  color: white;
+  background-color: rgba(0,0,0,0.99);
+}
+
+::selection {
+  color: white;
+  background-color: rgba(0,0,0,0.99);
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;
