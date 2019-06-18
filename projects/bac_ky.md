@@ -1,10 +1,12 @@
 ---
+date: 2019-01-03
 tags: project
-title: Bac Ky
-client: Bac Ky
-services: Design & Development
-cta: Visit site
+title: Bắc Kỳ
+client: Bắc Kỳ
+client_url: https://backy.netlify.com/
+services: Web Design & Development
+cta: Visit website
 project_url: https://backy.netlify.com/
 background_color: '#D9D3CB'
-description: We don’t stick with the old. We try new things, set our own limits, have honest conversations, and create things that matter. We craft simple sites for complex problems and put a strong emphasis on quality and efficiency in every detail from design to development.
+description: "We helped Bắc Kỳ design, develop, and launch a Squarespace website that focuses on the 3 things a restaurant site should have: a non-pdf menu, their location, and hours."
 ---
