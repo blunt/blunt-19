@@ -96,8 +96,8 @@
           <div class="flex flex-wrap">
             {%- for member in global.members -%}
               <div class="lg:w-1/2 w-full person flex md:items-center lg:mb-0 {% if forloop.index != forloop.length %}mb-6{% endif %}">
-                <div class="mr-4">
-                  <img class="w-16 h-16 object-fill rounded" src="images/{{ member.avatar }}" alt="">
+                <div class="mr-4 w-16 h-16">
+                  <img class="object-cover rounded h-full" src="images/{{ member.avatar }}" alt="">
                 </div>
                 <div class="md:text-base text-sm">
                   <p class="opacity-50 font-mono text-xs">/{{ member.title }}</p>
