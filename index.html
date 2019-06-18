@@ -44,9 +44,10 @@
           <div class="flex-grow mt-16 pb-16">
             <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-bold leading-none">{{ intro.heading }}</h2>
             {%- for description in intro.descriptions -%}
-              <p class="text-indent md:text-xl">{{ description }}</p>
+              <p class="text-indent md:text-2xl">{{ description }}</p>
             {%- endfor -%}
           </div>
+          <p class="opacity-50">Scroll to see our work</p>
         </article>
         <div class="relative">
           <div class="absolute z-20 w-full top-0 bottom-0 md:px-12 px-6 md:pb-12 pb-6 pointer-events-none">
@@ -64,7 +65,7 @@
                   <p class="ml-auto text-xs font-mono">{{ forloop.index }}<span class="text-transparent">/{{ forloop.length }}</span></p>
                 </div>
               </div>
-              <div class="flex-grow mt-16 mb-20 md:text-xl">
+              <div class="flex-grow mt-16 mb-20 md:text-2xl">
                 <h3 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-bold leading-none"><a href="{{ project.data.project_url }}" target="_blank" rel="noopener noreferrer">{{ project.data.title }}</a></h3>
                 <p class="text-indent">{{ project.data.description }}</p>
                 <a href="{{ project.data.project_url }}" class="mt-6 border-b border-black inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.cta }}</a>
