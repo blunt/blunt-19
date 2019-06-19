@@ -66,7 +66,7 @@
                 </div>
               </div>
               <div class="flex-grow mt-16 mb-20 lg:text-2xl md:text-xl">
-                <h3 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 font-bold leading-none"><a href="{{ project.data.project_url }}" target="_blank" rel="noopener noreferrer">{{ project.data.title }}</a></h3>
+                <h3 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-bold leading-none border-b-4 border-transparent hover:border-black"><a href="{{ project.data.project_url }}" target="_blank" rel="noopener noreferrer">{{ project.data.title }}</a></h3>
                 <p class="text-indent">{{ project.data.description }}</p>
                 <a href="{{ project.data.project_url }}" class="mt-6 border-b border-black inline-block hover:border-transparent" target="_blank" rel="noopener noreferrer">{{ project.data.cta }}</a>
               </div>
@@ -84,13 +84,31 @@
           {%- endfor -%}
         </div>
         <article class="min-h-screen bg-white ml-auto md:px-12 px-6 md:pb-12 pb-6 relative flex flex-col">
-          <div class="border-b bg-white pb-4 border-transparent sticky top-0 flex font-mono text-xs">
+          <div class="border-b bg-white pb-4 border-transparent sticky z-20 top-0 flex font-mono text-xs">
+            <div class="md:mt-12 pt-5 w-full flex">
+              <p class="block"><span class="text-transparent">/</span>{{ pageTitles.clients }}</p>
+            </div>
+          </div>
+          <div class="flex-grow md:mt-16 mt-16 mb-20 lg:text-2xl md:text-xl">
+            {%- for client in global.clients -%}
+              <div>
+                <a href="{{ client.url }}" class="inline-block lg:text-6xl md:text-5xl text-4xl mb-3 md:pt-2 font-bold leading-none border-b-4 border-transparent hover:border-black">{{ client.name }}</a>
+              </div>
+            {%- endfor -%}
+          </div>
+          <div class="">
+            <p class="opacity-50 font-mono text-xs">/business_inquiries</p>
+            <a href="mailto:{{ global.email }}" class="border-b border-black inline-block hover:border-transparent">{{ global.email }}</a>
+          </div>
+        </article>
+        <article class="min-h-screen bg-white ml-auto md:px-12 px-6 md:pb-12 pb-6 relative flex flex-col">
+          <div class="border-b bg-white pb-4 border-transparent sticky z-20 top-0 flex font-mono text-xs">
             <div class="md:mt-12 pt-5 w-full flex">
               <p class="block"><span class="text-transparent">/</span>{{ pageTitles.contact }}</p>
             </div>
           </div>
           <div class="flex-grow md:mt-16 mt-16 mb-20 lg:text-2xl md:text-xl">
-            <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-bold leading-none">{{ contact.heading }} <a href="mailto:{{ global.email }}" class="border-b-4 border-black inline-block hover:border-transparent">{{ contact.cta | downcase }}</a>.</h2>
+            <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-bold leading-none">{{ contact.heading }} <a href="mailto:{{ global.email }}" class="border-b-4 border-transparent inline-block hover:border-black">{{ contact.cta | downcase }}</a>.</h2>
             <p class="text-indent">{{ contact.description }}</p>
           </div>
           <div class="flex flex-wrap">

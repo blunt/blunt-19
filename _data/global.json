@@ -17,5 +17,27 @@
       "title": "technical_director",
       "email": "jeff.is@blunt.af"
     }
+  ],
+  "clients": [
+    {
+      "name": "Google",
+      "url": "https://www.google.com/"
+    },
+    {
+      "name": "VICE",
+      "url": "https://www.vice.com/en_ca"
+    },
+    {
+      "name": "Studio Function",
+      "url": "https://studiofunction.com/"
+    },
+    {
+      "name": "Oak",
+      "url": "https://oak.is/"
+    },
+    {
+      "name": "Format",
+      "url": "https://www.format.com/"
+    }
   ]
 }
