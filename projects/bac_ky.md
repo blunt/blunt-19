@@ -4,7 +4,7 @@ tags: project
 title: Bắc Kỳ
 client: Bắc Kỳ
 client_url: https://backy.netlify.com/
-services: Web Design & Development
+services: Design & Development
 cta: Visit website
 project_url: https://backy.netlify.com/
 background_color: '#A463F2'

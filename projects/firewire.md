@@ -4,7 +4,7 @@ tags: project
 title: Firewire
 client: XWP
 client_url: https://xwp.co/
-services: Web Design
+services: Design
 cta: Visit website
 project_url: https://firewiresurfboards.com/
 background_color: '#FF6300'

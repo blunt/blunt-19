@@ -4,7 +4,7 @@ tags: project
 title: Fabric
 client: Format
 client_url: https://www.format.com
-services: Web Design & Development
+services: Design & Development
 cta: Visit theme
 project_url: https://www.format.com/themes#fabric
 background_color: '#357EDD'
