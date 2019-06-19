@@ -7514,6 +7514,10 @@ body {
   background-color: rgba(0,0,0,0.99);
 }
 
+.-mt-5 {
+  margin-top: -.05rem;
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;
