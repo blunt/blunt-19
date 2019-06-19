@@ -43,7 +43,7 @@
           </div>
           <div class="flex-grow flex mt-16 pb-16 md:items-start items-center">
             <div>
-              <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-medium leading-none">{{ intro.heading }}</h2>
+              <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-bold leading-none">{{ intro.heading }}</h2>
               {%- for description in intro.descriptions -%}
                 <p class="text-indent lg:text-2xl md:text-xl">{{ description }}</p>
               {%- endfor -%}
@@ -115,7 +115,7 @@
           </div>
           <div class="flex-grow flex md:mt-16 mt-16 mb-20 lg:text-2xl md:text-xl md:items-start items-center">
             <div>
-              <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-medium leading-none">{{ contact.heading }} <a href="mailto:{{ global.email }}" class="border-b-4 border-transparent inline-block hover:border-black font-bold">{{ contact.cta | downcase }}</a>.</h2>
+              <h2 class="lg:text-6xl md:text-5xl text-4xl md:mb-12 mb-6 md:pt-2 font-bold leading-none">{{ contact.heading }} <a href="mailto:{{ global.email }}" class="border-b-4 border-transparent inline-block hover:border-black">{{ contact.cta | downcase }}</a>.</h2>
               <p class="text-indent">{{ contact.description }}</p>
             </div>
           </div>
