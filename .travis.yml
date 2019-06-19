@@ -14,5 +14,6 @@ deploy:
   keep_history: true
   local_dir: _site
   target_branch: master
+  fqdn: https://blunt.af
   on:
     branch: dev

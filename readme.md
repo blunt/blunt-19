@@ -5,7 +5,7 @@ Run `npm install`
 
 ### Develop
 Run `npm run watch`
-Visit `_site/index.html`
+Visit `http://localhost:8080/`
 
 ### Build
 Run `npm run build`
